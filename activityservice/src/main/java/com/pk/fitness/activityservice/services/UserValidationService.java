@@ -1,0 +1,23 @@
+package com.pk.fitness.activityservice.services;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class UserValidationService {
+
+    private final WebClient userServiceWebClient;
+
+    public Boolean validateUser(String userId) {
+        log.info("Calling User service to validate User by Id: {}", userId);
+        return userServiceWebClient.get()
+                .uri("/api/users/{userId}/validate", userId)
+                .retrieve()
+                .bodyToMono(Boolean.class)
+                .block();
+    }
+}
