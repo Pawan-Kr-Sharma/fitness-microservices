@@ -22,7 +22,7 @@ Dynamic Routing: Secure and efficient request handling through the API Gateway.
 Service Resiliency: Designed for fault tolerance and seamless service-to-service communication.
 
 Getting Started
-Clone the repo: git clone https://github.com/yourusername/health-tracker-microservices.git
+Clone the repo: git clone https://github.com/Pawan-Kr-Sharma/fitness-microservices.git
 Set Environment Variables: Add your GEMINI_API_KEY to the AI Service configuration.
 Build: Run mvn clean install across all modules.
 Run: Start the Config Server, followed by Eureka, and then the functional services.
